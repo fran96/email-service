@@ -1,0 +1,8 @@
+mailgun:
+  domain: "sandbox032d5a4aea584686a51a62bf424d63c3.mailgun.org"
+  apiKey: "658cf8f5a78b3d4e18a8f0680d5f112e-e438c741-33e92a21"
+  from: "fran96@mailinator.com"
+
+sendgrid:
+  apiKey: "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"
+  from: "fran96@mailinator.com"

@@ -1,0 +1,46 @@
+definitions:
+  internal.Mail:
+    properties:
+      message:
+        type: string
+      subject:
+        type: string
+      to:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /api:
+    post:
+      consumes:
+      - application/json
+      description: Send mail
+      parameters:
+      - description: To, Subject, Message
+        in: body
+        name: mail
+        required: true
+        schema:
+          $ref: '#/definitions/internal.Mail'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: created
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Send mail
+swagger: "2.0"
